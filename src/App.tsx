@@ -1,4 +1,5 @@
 import React from 'react';
+import { Route, Routes } from 'react-router-dom';
 
 import './App.css';
 
@@ -10,9 +11,10 @@ function App() {
     
   return (
     <div className='max-w-6xl container mx-auto mt-20'>
-        <Avia/>
-
-        <Info/>
+        <Routes>
+            <Route path='/avia' element={<Avia/>}/>
+            <Route path='/avia/info' element={<Info/>}/>
+        </Routes>
     </div>
     
   );
